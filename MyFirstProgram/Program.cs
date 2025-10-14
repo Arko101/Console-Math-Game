@@ -2,9 +2,9 @@
 
 Console.WriteLine("Enter two numbers for calculation:");
 
-int num1 = int.Parse(Console.ReadLine());
+double num1 = double.Parse(Console.ReadLine());
 
-int num2 = int.Parse(Console.ReadLine());
+double num2 = double.Parse(Console.ReadLine());
 
 Console.WriteLine("Enter choice of operation");
 int choice = int.Parse(Console.ReadLine());
@@ -30,7 +30,10 @@ switch (choice)
     case 4:
         if (num2 != 0)
         {
-            Console.WriteLine("Division: " + (num1 / num2));
+            double div = num1 / num2;
+            int divInt = (int)div;
+
+            Console.WriteLine("Division: " + divInt);
         }
         else
         {
